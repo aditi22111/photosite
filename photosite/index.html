@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="sheet.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand text-primary" href="#">Tasky</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+             
+            </ul>
+            <form class="d-flex1" role="search">
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Add New</button>
+            </form>
+            
+          </div>
+        </div>
+      </nav>   
+
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Title</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+    
+             
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="imageurl" class="form-label">Image Url</label>
+                        <input type="url" class="form-control" id="imageurl" aria-describedby="Image Url" placeholder="http://example.com/xyz.png">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tasktitle" class="form-label">Task title</label>
+                        <input type="text" class="form-control" id="tasktitle" aria-describedby="Task Title" placeholder="Enter Task Title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tasktype" class="form-label">Task Type</label>
+                      <input type="text" class="form-control" id="tasktype" aria-describedby="Task Type" placeholder="Enter Task Type">
+                    </div>
+                    <div class="mb-3">
+                        <label for="taskdescription" class="form-label">Task Description</label>
+                        <textarea rows="6" input type="text" class="form-control" id="taskdescription" aria-describedby="Task Description" placeholder="Enter Task Description"></textarea>
+                    </div>
+                </div>
+
+    
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="saveChanges()" data-bs-dismiss="modal">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="container">
+        <section class="row justify-content-center mt-5">
+          <div class="col-md-8 col-lg-6">
+            <div class="input-group mb-3 shadow">
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Search Task"
+                aria-label="Search Task"
+                aria-describedby="basic-addon1"
+              />
+              <span class="input-group-text" id="basic-addon1">
+                <i class="far fa-search"></i>
+              </span>
+            </div>
+          </div>
+        </section>
+  
+        <!-- Task Container -->
+        <section class="task__container row"></section>
+      </main>
+
+    <script src="file.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
